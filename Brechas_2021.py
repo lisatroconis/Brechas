@@ -13,17 +13,16 @@ import os
 import pandas as pd
 import numpy as np
 
-# Selección de directorio
-os.chdir("C:/Users/Lisa/Documents/Bases de Python/Dashboard de Brechas SAN")
+# Selección de directorio)
 
 ## Carga de bases de datos
 
 # La base de datos de activity info es la tabla de datos otorgada por GIFMM en versiób bruta
-Ac_In = pd.read_excel("C:/Users/Lisa/Documents/Bases de Python/Dashboard de Brechas SAN/5W_Colombia_-_RMRP_2022_Consolidado uno_18032022 (6).xlsx", sheet_name='Reporte socios GIFMM_5W Colombi')
+Ac_In = pd.read_excel("5W_Colombia_-_RMRP_2022_Consolidado uno_18032022 (6).xlsx", sheet_name='Reporte socios GIFMM_5W Colombi')
 
 # Base de datos para divipolas y nombres de los departamentos
-divla = pd.read_excel("C:/Users/Lisa/Documents/Bases de Python/Dashboard de Brechas SAN/divipolita.xlsx", sheet_name='etiqueta')
-divnm = pd.read_excel("C:/Users/Lisa/Documents/Bases de Python/Dashboard de Brechas SAN//divipolita.xlsx", sheet_name='codigo')
+divla = pd.read_excel("divipolita.xlsx", sheet_name='etiqueta')
+divnm = pd.read_excel("divipolita.xlsx", sheet_name='codigo')
 
 # Bases GIFMM
 PINx = pd.read_excel("C:/Users/Lisa/Documents/Bases de Python/Dashboard de Brechas SAN/PIN 2021.xlsx")
@@ -268,4 +267,4 @@ Ac_In = Ac_In[['Sector','dpto','Departamento','longitud','latitud','Grupo poblac
 #Ac_In.rename(columns={"Financiacción": "Financiación"}, inplace=True)
 
 # Exportar base final
-Ac_In.to_excel("C:/Users/Lisa/Documents/Bases de Python/Dashboard de Brechas SAN/base_brechas_2021.xlsx",index=False)
+Ac_In.to_excel("base_brechas_2021.xlsx",index=False)
